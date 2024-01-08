@@ -10,7 +10,10 @@ public class BankAccount {
         this.accountName = accountName;
         this.balance = initialDeposit;
     }
-
+    // отримання номера аккаунту
+    public int getAccountNumber() {
+        return accountNumber;
+    }
     //Реалізуйте методи deposit(double amount), withdraw(double amount), getBalance() та getAccountSummary()
     public void deposit(double amount) throws NegativeAmountException {
         if (amount < 0) {

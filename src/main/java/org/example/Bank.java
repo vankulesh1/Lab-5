@@ -19,14 +19,14 @@ public BankAccount createAccount(String accountName, double initialDeposit) {
 }
 
 //пошук
-    public BankAccount findAccount(int accountNumber) throws AccountNotFoundException {
-        for (BankAccount account : accounts) {
-            if (account.getAccountNumber() == accountNumber) {
-                return account;
-            }
+public BankAccount findAccount(int accountNumber) throws AccountNotFoundException {
+    for (BankAccount account : accounts) {
+        if (account.getAccountNumber() == accountNumber) {
+            return account;
         }
-        throw new AccountNotFoundException("Рахунок #" + accountNumber + " не знайдено.");
     }
+    throw new AccountNotFoundException("Рахунок #" + accountNumber + " не знайдено.");
+}
 ///перевод коштів
     public void transferMoney(int fromAccountNumber, int toAccountNumber, double amount)
             throws AccountNotFoundException, NegativeAmountException, InsufficientFundsException {
