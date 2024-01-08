@@ -4,3 +4,5 @@ public class NegativeAmountException extends Exception {
         super(message);
     }
 }
+
+//клас винятку
